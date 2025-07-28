@@ -1,0 +1,10 @@
+/home/zyberg/il/MethodLogger/bin/Debug/net452/MethodLogger.dll
+/home/zyberg/il/MethodLogger/bin/Debug/net452/MethodLogger.pdb
+/home/zyberg/il/MethodLogger/bin/Debug/net452/MethodLogger.xml
+/home/zyberg/il/MethodLogger/obj/Debug/net452/MethodLogger.GeneratedMSBuildEditorConfig.editorconfig
+/home/zyberg/il/MethodLogger/obj/Debug/net452/MethodLogger.AssemblyInfoInputs.cache
+/home/zyberg/il/MethodLogger/obj/Debug/net452/MethodLogger.AssemblyInfo.cs
+/home/zyberg/il/MethodLogger/obj/Debug/net452/MethodLogger.csproj.CoreCompileInputs.cache
+/home/zyberg/il/MethodLogger/obj/Debug/net452/MethodLogger.dll
+/home/zyberg/il/MethodLogger/obj/Debug/net452/MethodLogger.xml
+/home/zyberg/il/MethodLogger/obj/Debug/net452/MethodLogger.pdb

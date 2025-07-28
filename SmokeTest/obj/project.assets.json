@@ -1,0 +1,170 @@
+{
+  "version": 3,
+  "targets": {
+    "net9.0": {
+      "Fody/6.9.2": {
+        "type": "package",
+        "build": {
+          "build/Fody.targets": {}
+        }
+      },
+      "MethodLogger.Fody/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Fody": "6.6.4"
+        },
+        "compile": {
+          "lib/netstandard2.1/MethodLogger.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/MethodLogger.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "build/MethodLogger.Fody.props": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Fody/6.9.2": {
+      "sha512": "YBHobPGogb0vYhGYIxn/ndWqTjNWZveDi5jdjrcshL2vjwU3gQGyDeI7vGgye+2rAM5fGRvlLgNWLW3DpviS/w==",
+      "type": "package",
+      "path": "fody/6.9.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "License.txt",
+        "build/Fody.targets",
+        "fody.6.9.2.nupkg.sha512",
+        "fody.nuspec",
+        "netclassictask/Fody.dll",
+        "netclassictask/FodyCommon.dll",
+        "netclassictask/FodyHelpers.dll",
+        "netclassictask/FodyIsolated.dll",
+        "netclassictask/Mono.Cecil.Pdb.dll",
+        "netclassictask/Mono.Cecil.Pdb.pdb",
+        "netclassictask/Mono.Cecil.Rocks.dll",
+        "netclassictask/Mono.Cecil.Rocks.pdb",
+        "netclassictask/Mono.Cecil.dll",
+        "netclassictask/Mono.Cecil.pdb",
+        "netstandardtask/Fody.dll",
+        "netstandardtask/FodyCommon.dll",
+        "netstandardtask/FodyHelpers.dll",
+        "netstandardtask/FodyIsolated.dll",
+        "netstandardtask/Mono.Cecil.Pdb.dll",
+        "netstandardtask/Mono.Cecil.Pdb.pdb",
+        "netstandardtask/Mono.Cecil.Rocks.dll",
+        "netstandardtask/Mono.Cecil.Rocks.pdb",
+        "netstandardtask/Mono.Cecil.dll",
+        "netstandardtask/Mono.Cecil.pdb",
+        "package_icon.png",
+        "package_readme.md"
+      ]
+    },
+    "MethodLogger.Fody/1.0.0": {
+      "sha512": "b92hQscwwUpuWvWgywcJEy+zyoiENbYq+rrmu+gkAGO8UNtrSAmmby3PB6Amy7DG9e8pJLHJL/eeVsDCiumL2g==",
+      "type": "package",
+      "path": "methodlogger.fody/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "build/MethodLogger.Fody.props",
+        "lib/net452/MethodLogger.dll",
+        "lib/net452/MethodLogger.xml",
+        "lib/netstandard2.0/MethodLogger.dll",
+        "lib/netstandard2.0/MethodLogger.xml",
+        "lib/netstandard2.1/MethodLogger.dll",
+        "lib/netstandard2.1/MethodLogger.xml",
+        "methodlogger.fody.1.0.0.nupkg.sha512",
+        "methodlogger.fody.nuspec",
+        "weaver/MethodLogger.Fody.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net9.0": [
+      "Fody >= 6.9.2",
+      "MethodLogger.Fody >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/home/zyberg/.nuget/packages/": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/home/zyberg/il/SmokeTest/SmokeTest.csproj",
+      "projectName": "SmokeTest",
+      "projectPath": "/home/zyberg/il/SmokeTest/SmokeTest.csproj",
+      "packagesPath": "/home/zyberg/.nuget/packages/",
+      "outputPath": "/home/zyberg/il/SmokeTest/obj/",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "/home/zyberg/il/SmokeTest/NuGet.config",
+        "/home/zyberg/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net9.0"
+      ],
+      "sources": {
+        "/home/zyberg/il/nugets": {},
+        "/home/zyberg/ilweave/nuget-local": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.pkg.github.com/light-conversion/index.json": {}
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.200"
+    },
+    "frameworks": {
+      "net9.0": {
+        "targetAlias": "net9.0",
+        "dependencies": {
+          "Fody": {
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[6.9.2, )"
+          },
+          "MethodLogger.Fody": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/nix/store/nahhdksqqhhna3cfirrqqhl29h6x8c71-dotnet-sdk-9.0.204/share/dotnet/sdk/9.0.204/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

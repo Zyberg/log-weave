@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "z4kNu/sSlA8=",
+  "success": true,
+  "projectFilePath": "/home/zyberg/il/MethodLogger.Fody/MethodLogger.Fody.csproj",
+  "expectedPackageFiles": [
+    "/home/zyberg/.nuget/packages/fodyhelpers/6.9.2/fodyhelpers.6.9.2.nupkg.sha512",
+    "/home/zyberg/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/home/zyberg/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

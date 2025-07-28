@@ -1,0 +1,5 @@
+/home/zyberg/il/SmokeTest/obj/Debug/netstandard2.0/SmokeTest.csproj.AssemblyReference.cache
+/home/zyberg/il/SmokeTest/obj/Debug/netstandard2.0/SmokeTest.GeneratedMSBuildEditorConfig.editorconfig
+/home/zyberg/il/SmokeTest/obj/Debug/netstandard2.0/SmokeTest.AssemblyInfoInputs.cache
+/home/zyberg/il/SmokeTest/obj/Debug/netstandard2.0/SmokeTest.AssemblyInfo.cs
+/home/zyberg/il/SmokeTest/obj/Debug/netstandard2.0/SmokeTest.csproj.CoreCompileInputs.cache

@@ -1,0 +1,17 @@
+/home/zyberg/il/SmokeTest/obj/Debug/net9.0/SmokeTest.csproj.AssemblyReference.cache
+/home/zyberg/il/SmokeTest/obj/Debug/net9.0/SmokeTest.GeneratedMSBuildEditorConfig.editorconfig
+/home/zyberg/il/SmokeTest/obj/Debug/net9.0/SmokeTest.AssemblyInfoInputs.cache
+/home/zyberg/il/SmokeTest/obj/Debug/net9.0/SmokeTest.AssemblyInfo.cs
+/home/zyberg/il/SmokeTest/obj/Debug/net9.0/SmokeTest.csproj.CoreCompileInputs.cache
+/home/zyberg/il/SmokeTest/obj/Debug/net9.0/SmokeTest.dll
+/home/zyberg/il/SmokeTest/obj/Debug/net9.0/refint/SmokeTest.dll
+/home/zyberg/il/SmokeTest/obj/Debug/net9.0/SmokeTest.pdb
+/home/zyberg/il/SmokeTest/bin/Debug/net9.0/SmokeTest
+/home/zyberg/il/SmokeTest/bin/Debug/net9.0/SmokeTest.deps.json
+/home/zyberg/il/SmokeTest/bin/Debug/net9.0/SmokeTest.runtimeconfig.json
+/home/zyberg/il/SmokeTest/bin/Debug/net9.0/SmokeTest.dll
+/home/zyberg/il/SmokeTest/bin/Debug/net9.0/SmokeTest.pdb
+/home/zyberg/il/SmokeTest/bin/Debug/net9.0/MethodLogger.dll
+/home/zyberg/il/SmokeTest/obj/Debug/net9.0/SmokeTest.csproj.Up2Date
+/home/zyberg/il/SmokeTest/obj/Debug/net9.0/SmokeTest.genruntimeconfig.cache
+/home/zyberg/il/SmokeTest/obj/Debug/net9.0/ref/SmokeTest.dll

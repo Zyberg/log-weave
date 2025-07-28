@@ -1,0 +1,12 @@
+/home/zyberg/il/MethodLogger/bin/Debug/netstandard2.0/MethodLogger.deps.json
+/home/zyberg/il/MethodLogger/bin/Debug/netstandard2.0/MethodLogger.dll
+/home/zyberg/il/MethodLogger/bin/Debug/netstandard2.0/MethodLogger.pdb
+/home/zyberg/il/MethodLogger/bin/Debug/netstandard2.0/MethodLogger.xml
+/home/zyberg/il/MethodLogger/obj/Debug/netstandard2.0/MethodLogger.csproj.AssemblyReference.cache
+/home/zyberg/il/MethodLogger/obj/Debug/netstandard2.0/MethodLogger.GeneratedMSBuildEditorConfig.editorconfig
+/home/zyberg/il/MethodLogger/obj/Debug/netstandard2.0/MethodLogger.AssemblyInfoInputs.cache
+/home/zyberg/il/MethodLogger/obj/Debug/netstandard2.0/MethodLogger.AssemblyInfo.cs
+/home/zyberg/il/MethodLogger/obj/Debug/netstandard2.0/MethodLogger.csproj.CoreCompileInputs.cache
+/home/zyberg/il/MethodLogger/obj/Debug/netstandard2.0/MethodLogger.dll
+/home/zyberg/il/MethodLogger/obj/Debug/netstandard2.0/MethodLogger.xml
+/home/zyberg/il/MethodLogger/obj/Debug/netstandard2.0/MethodLogger.pdb
