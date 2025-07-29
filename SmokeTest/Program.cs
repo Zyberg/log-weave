@@ -1,21 +1,20 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using SmokeTest;
 
-var b = new Name();
+var builder = Host.CreateApplicationBuilder();
 
-b.SomeMethodPublic();
+builder.Services.AddSingleton<Test>();
 
+builder.Services.AddLogging(config =>
+    {
+        config.AddConsole();              // 👈 Required
+        config.SetMinimumLevel(LogLevel.Information);
+    });
 
-return;
+var app = builder.Build();
 
-public class Name
-{
-  public Name()
-  {
-    var a = 1;
-  } 
+var a = app.Services.GetRequiredService<Test>();
 
-  public void SomeMethodPublic() {
-    Console.WriteLine("Hello, some public method!");
-  }
-}
+a.DoSomething(12);

@@ -10,3 +10,4 @@
 /home/zyberg/il/MethodLogger/obj/Release/netstandard2.0/MethodLogger.dll
 /home/zyberg/il/MethodLogger/obj/Release/netstandard2.0/MethodLogger.xml
 /home/zyberg/il/MethodLogger/obj/Release/netstandard2.0/MethodLogger.pdb
+/home/zyberg/il/MethodLogger/obj/Release/netstandard2.0/MethodLogger.sourcelink.json

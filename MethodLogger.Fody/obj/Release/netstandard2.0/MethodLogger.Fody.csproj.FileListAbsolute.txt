@@ -6,3 +6,4 @@
 /home/zyberg/il/MethodLogger.Fody/obj/Release/netstandard2.0/MethodLogger.Fody.AssemblyInfo.cs
 /home/zyberg/il/MethodLogger.Fody/obj/Release/netstandard2.0/MethodLogger.Fody.csproj.CoreCompileInputs.cache
 /home/zyberg/il/MethodLogger.Fody/obj/Release/netstandard2.0/MethodLogger.Fody.dll
+/home/zyberg/il/MethodLogger.Fody/obj/Release/netstandard2.0/MethodLogger.Fody.sourcelink.json

@@ -55,7 +55,11 @@
             },
             "MethodLogger.Fody": {
               "target": "Package",
-              "version": "[1.0.0, )"
+              "version": "[1.0.5, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[9.0.7, )"
             }
           },
           "imports": [

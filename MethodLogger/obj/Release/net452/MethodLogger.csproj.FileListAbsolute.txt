@@ -8,3 +8,4 @@
 /home/zyberg/il/MethodLogger/obj/Release/net452/MethodLogger.dll
 /home/zyberg/il/MethodLogger/obj/Release/net452/MethodLogger.xml
 /home/zyberg/il/MethodLogger/obj/Release/net452/MethodLogger.pdb
+/home/zyberg/il/MethodLogger/obj/Release/net452/MethodLogger.sourcelink.json

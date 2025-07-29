@@ -5,7 +5,7 @@
   },
   "projects": {
     "/home/zyberg/il/MethodLogger/MethodLogger.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.5",
       "restore": {
         "projectUniqueName": "/home/zyberg/il/MethodLogger/MethodLogger.csproj",
         "projectName": "MethodLogger",

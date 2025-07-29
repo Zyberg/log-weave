@@ -7,7 +7,7 @@
   "targets": {
     ".NETStandard,Version=v2.1": {},
     ".NETStandard,Version=v2.1/": {
-      "MethodLogger/1.0.0": {
+      "MethodLogger/1.0.5": {
         "dependencies": {
           "Fody": "6.6.4",
           "FodyPackaging": "6.6.4"
@@ -21,7 +21,7 @@
     }
   },
   "libraries": {
-    "MethodLogger/1.0.0": {
+    "MethodLogger/1.0.5": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
