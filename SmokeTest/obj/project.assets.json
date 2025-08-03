@@ -8,7 +8,7 @@
           "build/Fody.targets": {}
         }
       },
-      "MethodLogger.Fody/1.0.5": {
+      "MethodLogger.Fody/1.0.11": {
         "type": "package",
         "dependencies": {
           "Fody": "6.6.4"
@@ -667,10 +667,10 @@
         "package_readme.md"
       ]
     },
-    "MethodLogger.Fody/1.0.5": {
-      "sha512": "U3bt4z9odEV3/1Ky7byNrhxFguowElXYLSjr8tK42nYYaK+Ngx++clmBsQy3x/s8GxP9ONhTyO+s85pmxvvOyg==",
+    "MethodLogger.Fody/1.0.11": {
+      "sha512": "dD/VCyqkJB2jn1BFXEjL+HCkYCCr+JAJeXMohPg8vrI09HZ7asU+11xoeuUXSOEKg2cjc0vkFO//CBBIB+dD/A==",
       "type": "package",
-      "path": "methodlogger.fody/1.0.5",
+      "path": "methodlogger.fody/1.0.11",
       "files": [
         ".nupkg.metadata",
         "build/MethodLogger.Fody.props",
@@ -680,7 +680,7 @@
         "lib/netstandard2.0/MethodLogger.xml",
         "lib/netstandard2.1/MethodLogger.dll",
         "lib/netstandard2.1/MethodLogger.xml",
-        "methodlogger.fody.1.0.5.nupkg.sha512",
+        "methodlogger.fody.1.0.11.nupkg.sha512",
         "methodlogger.fody.nuspec",
         "weaver/MethodLogger.Fody.dll"
       ]
@@ -1561,7 +1561,7 @@
   "projectFileDependencyGroups": {
     "net9.0": [
       "Fody >= 6.9.2",
-      "MethodLogger.Fody >= 1.0.5",
+      "MethodLogger.Fody >= 1.0.11",
       "Microsoft.Extensions.Hosting >= 9.0.7"
     ]
   },
@@ -1619,7 +1619,7 @@
           },
           "MethodLogger.Fody": {
             "target": "Package",
-            "version": "[1.0.5, )"
+            "version": "[1.0.11, )"
           },
           "Microsoft.Extensions.Hosting": {
             "target": "Package",

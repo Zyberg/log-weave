@@ -46,5 +46,3 @@
 /home/zyberg/il/SmokeTest/obj/Debug/net9.0/SmokeTest.pdb
 /home/zyberg/il/SmokeTest/obj/Debug/net9.0/SmokeTest.genruntimeconfig.cache
 /home/zyberg/il/SmokeTest/obj/Debug/net9.0/ref/SmokeTest.dll
-/home/zyberg/il/SmokeTest/obj/Debug/net9.0/SmokeTest.csproj.Fody.CopyLocal.cache
-/home/zyberg/il/SmokeTest/obj/Debug/net9.0/SmokeTest.csproj.Fody.RuntimeCopyLocal.cache

@@ -9,7 +9,7 @@
       "SmokeTest/1.0.0": {
         "dependencies": {
           "Fody": "6.9.2",
-          "MethodLogger.Fody": "1.0.5",
+          "MethodLogger.Fody": "1.0.11",
           "Microsoft.Extensions.Hosting": "9.0.7"
         },
         "runtime": {
@@ -17,14 +17,14 @@
         }
       },
       "Fody/6.9.2": {},
-      "MethodLogger.Fody/1.0.5": {
+      "MethodLogger.Fody/1.0.11": {
         "dependencies": {
           "Fody": "6.9.2"
         },
         "runtime": {
           "lib/netstandard2.1/MethodLogger.dll": {
-            "assemblyVersion": "1.0.5.0",
-            "fileVersion": "1.0.5.0"
+            "assemblyVersion": "1.0.11.0",
+            "fileVersion": "1.0.11.0"
           }
         }
       },
@@ -424,12 +424,12 @@
       "path": "fody/6.9.2",
       "hashPath": "fody.6.9.2.nupkg.sha512"
     },
-    "MethodLogger.Fody/1.0.5": {
+    "MethodLogger.Fody/1.0.11": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-U3bt4z9odEV3/1Ky7byNrhxFguowElXYLSjr8tK42nYYaK+Ngx++clmBsQy3x/s8GxP9ONhTyO+s85pmxvvOyg==",
-      "path": "methodlogger.fody/1.0.5",
-      "hashPath": "methodlogger.fody.1.0.5.nupkg.sha512"
+      "sha512": "sha512-dD/VCyqkJB2jn1BFXEjL+HCkYCCr+JAJeXMohPg8vrI09HZ7asU+11xoeuUXSOEKg2cjc0vkFO//CBBIB+dD/A==",
+      "path": "methodlogger.fody/1.0.11",
+      "hashPath": "methodlogger.fody.1.0.11.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/9.0.7": {
       "type": "package",

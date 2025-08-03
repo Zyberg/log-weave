@@ -17,4 +17,5 @@ var app = builder.Build();
 
 var a = app.Services.GetRequiredService<Test>();
 
-a.DoSomething(12);
+var aa = a.DoSomething(12, 15);
+var b = aa * 19;

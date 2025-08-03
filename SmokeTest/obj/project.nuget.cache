@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "al3Y/+duiek=",
+  "dgSpecHash": "yQZhRU2JDqE=",
   "success": true,
   "projectFilePath": "/home/zyberg/il/SmokeTest/SmokeTest.csproj",
   "expectedPackageFiles": [
     "/home/zyberg/.nuget/packages/fody/6.9.2/fody.6.9.2.nupkg.sha512",
-    "/home/zyberg/.nuget/packages/methodlogger.fody/1.0.5/methodlogger.fody.1.0.5.nupkg.sha512",
+    "/home/zyberg/.nuget/packages/methodlogger.fody/1.0.11/methodlogger.fody.1.0.11.nupkg.sha512",
     "/home/zyberg/.nuget/packages/microsoft.extensions.configuration/9.0.7/microsoft.extensions.configuration.9.0.7.nupkg.sha512",
     "/home/zyberg/.nuget/packages/microsoft.extensions.configuration.abstractions/9.0.7/microsoft.extensions.configuration.abstractions.9.0.7.nupkg.sha512",
     "/home/zyberg/.nuget/packages/microsoft.extensions.configuration.binder/9.0.7/microsoft.extensions.configuration.binder.9.0.7.nupkg.sha512",

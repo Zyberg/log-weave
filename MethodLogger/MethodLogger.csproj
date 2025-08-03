@@ -11,7 +11,7 @@
     <PackageOutputPath>$(SolutionDir)../nugets</PackageOutputPath>
     <PackageProjectUrl>https://github.com/Fody/Home/tree/master/BasicFodyAddin</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/Fody/Home/master/BasicFodyAddin/package_icon.png</PackageIconUrl>
-    <Version>1.0.5</Version>
+    <Version>1.0.11</Version>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Fody" Version="6.6.4" PrivateAssets="none" />

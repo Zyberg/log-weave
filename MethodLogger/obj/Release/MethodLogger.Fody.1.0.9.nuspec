@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>MethodLogger.Fody</id>
+    <version>1.0.9</version>
+    <authors>Zyberg</authors>
+    <license type="expression">MIT</license>
+    <licenseUrl>https://licenses.nuget.org/MIT</licenseUrl>
+    <projectUrl>https://github.com/Fody/Home/tree/master/BasicFodyAddin</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/Fody/Home/master/BasicFodyAddin/package_icon.png</iconUrl>
+    <description>Logs every method in an assembly.</description>
+    <copyright>Copyright 2025.</copyright>
+    <tags>Hello World, ILWeaving, Fody, Cecil, AOP</tags>
+    <repository type="git" commit="6de36ef274c13bb1054976c768111c6138fbb389" />
+    <dependencies>
+      <group targetFramework=".NETFramework4.5.2">
+        <dependency id="Fody" version="6.6.4" include="All" />
+      </group>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Fody" version="6.6.4" include="All" />
+      </group>
+      <group targetFramework=".NETStandard2.1">
+        <dependency id="Fody" version="6.6.4" include="All" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="/home/zyberg/il/MethodLogger/bin/Release/net452/MethodLogger.dll" target="lib/net452/MethodLogger.dll" />
+    <file src="/home/zyberg/il/MethodLogger/bin/Release/net452/MethodLogger.xml" target="lib/net452/MethodLogger.xml" />
+    <file src="/home/zyberg/il/MethodLogger/bin/Release/netstandard2.0/MethodLogger.dll" target="lib/netstandard2.0/MethodLogger.dll" />
+    <file src="/home/zyberg/il/MethodLogger/bin/Release/netstandard2.0/MethodLogger.xml" target="lib/netstandard2.0/MethodLogger.xml" />
+    <file src="/home/zyberg/il/MethodLogger/bin/Release/netstandard2.1/MethodLogger.dll" target="lib/netstandard2.1/MethodLogger.dll" />
+    <file src="/home/zyberg/il/MethodLogger/bin/Release/netstandard2.1/MethodLogger.xml" target="lib/netstandard2.1/MethodLogger.xml" />
+    <file src="/home/zyberg/il/MethodLogger.Fody/bin/Release/netstandard2.0/MethodLogger.Fody.dll" target="weaver/MethodLogger.Fody.dll" />
+    <file src="/home/zyberg/.nuget/packages/fodypackaging/6.6.4/Weaver.props" target="build/MethodLogger.Fody.props" />
+  </files>
+</package>

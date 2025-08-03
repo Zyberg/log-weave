@@ -10,8 +10,9 @@ namespace SmokeTest
         _logger = logger;
       }
 
-      public void DoSomething(int a) {
-        _logger.LogInformation("TEST log from inside DoSomething({a})", a);
+      public int DoSomething(int oo, int bb) {
+        _logger.LogInformation("oo={0}, bb={1}", oo, bb );
+        return oo + bb;
       }
    } 
 }
