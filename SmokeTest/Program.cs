@@ -19,3 +19,6 @@ var a = app.Services.GetRequiredService<Test>();
 
 var aa = a.DoSomething(12, 15);
 var b = aa * 19;
+
+// Unless app is ran or console.writeline is called, the logs aren't flushed.... This took me a while to figure out
+app.Run();

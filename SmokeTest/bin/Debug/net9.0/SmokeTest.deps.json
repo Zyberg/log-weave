@@ -427,7 +427,7 @@
     "MethodLogger.Fody/1.0.11": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-dD/VCyqkJB2jn1BFXEjL+HCkYCCr+JAJeXMohPg8vrI09HZ7asU+11xoeuUXSOEKg2cjc0vkFO//CBBIB+dD/A==",
+      "sha512": "sha512-7MCBydYYvRBOpIycFl4LvBsk+trO1ovYXjwWR0mysaGOJp6XG/yczfsJt64rpjheLXXgjt8YwQb99ckZdX3M6Q==",
       "path": "methodlogger.fody/1.0.11",
       "hashPath": "methodlogger.fody.1.0.11.nupkg.sha512"
     },

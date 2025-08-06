@@ -40,6 +40,8 @@
 /home/zyberg/il/SmokeTest/obj/Debug/net9.0/SmokeTest.AssemblyInfo.cs
 /home/zyberg/il/SmokeTest/obj/Debug/net9.0/SmokeTest.csproj.CoreCompileInputs.cache
 /home/zyberg/il/SmokeTest/obj/Debug/net9.0/SmokeTest.sourcelink.json
+/home/zyberg/il/SmokeTest/obj/Debug/net9.0/SmokeTest.csproj.Fody.CopyLocal.cache
+/home/zyberg/il/SmokeTest/obj/Debug/net9.0/SmokeTest.csproj.Fody.RuntimeCopyLocal.cache
 /home/zyberg/il/SmokeTest/obj/Debug/net9.0/SmokeTest.csproj.Up2Date
 /home/zyberg/il/SmokeTest/obj/Debug/net9.0/SmokeTest.dll
 /home/zyberg/il/SmokeTest/obj/Debug/net9.0/refint/SmokeTest.dll

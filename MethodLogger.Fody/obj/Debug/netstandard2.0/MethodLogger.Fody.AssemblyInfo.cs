@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MethodLogger.Fody")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6de36ef274c13bb1054976c768111c6138fbb389")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83d9464899d9aaf4d5a545815ac55d0d6e2fde68")]
 [assembly: System.Reflection.AssemblyProductAttribute("MethodLogger.Fody")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MethodLogger.Fody")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

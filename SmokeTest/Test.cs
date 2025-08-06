@@ -11,7 +11,7 @@ namespace SmokeTest
       }
 
       public int DoSomething(int oo, int bb) {
-        _logger.LogInformation("oo={0}, bb={1}", oo, bb );
+        _logger.LogInformation("oo={0}", oo);
         return oo + bb;
       }
    } 

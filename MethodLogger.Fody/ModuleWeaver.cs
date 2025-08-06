@@ -8,9 +8,9 @@ using System;
 
 public class ModuleWeaver : BaseModuleWeaver
 {
-    public MethodReference LogInfoMethodReference { get; private set; }
+  public MethodReference LogInfoMethodReference { get; private set; }
 
-    public override void Execute()
+  public override void Execute()
   {
 
     LogInfoMethodReference = FindLogInformationMethod();
@@ -41,34 +41,34 @@ public class ModuleWeaver : BaseModuleWeaver
     }
   }
 
-   private MethodReference GetArrayEmptyObjectMethod()
-{
+  private MethodReference GetArrayEmptyObjectMethod()
+  {
     // Find System.Array type
     var arrayType = ModuleDefinition
-        .TypeSystem
-        .Object
-        .Resolve()
-        .Module
-        .Types
-        .FirstOrDefault(t => t.FullName == "System.Array");
+      .TypeSystem
+      .Object
+      .Resolve()
+      .Module
+      .Types
+      .FirstOrDefault(t => t.FullName == "System.Array");
 
     if (arrayType == null)
     {
-        LogError("Could not resolve System.Array.");
-        return null;
+      LogError("Could not resolve System.Array.");
+      return null;
     }
 
     // Find the generic method definition
     var emptyDef = arrayType.Methods
-        .FirstOrDefault(m =>
-            m.Name == "Empty" &&
-            m.HasGenericParameters &&
-            m.Parameters.Count == 0);
+      .FirstOrDefault(m =>
+          m.Name == "Empty" &&
+          m.HasGenericParameters &&
+          m.Parameters.Count == 0);
 
     if (emptyDef == null)
     {
-        LogError("Could not find Array.Empty<T>() method.");
-        return null;
+      LogError("Could not find Array.Empty<T>() method.");
+      return null;
     }
 
     // Create a GenericInstanceMethod with T = object
@@ -79,45 +79,71 @@ public class ModuleWeaver : BaseModuleWeaver
 }
 void InjectLogCall(MethodDefinition method, FieldDefinition loggerField)
 {
-  var il = method.Body.GetILProcessor();
-  var firstInstruction = method.Body.Instructions.First();
+  var newInstructions = new List<Instruction>();
 
+  // Create variable to hold the array to be passed to the LogEntry() method       
+  var arrayDef = new VariableDefinition(new ArrayType(ModuleDefinition.TypeSystem.Object));
+   
+  // Add variable to the method
+  method.Body.Variables.Add(arrayDef);
 
+  var processor = method.Body.GetILProcessor();
 
-  var parameters = method.Parameters;
-  int paramCount = parameters.Count;
+  // laod the this._logger
+  newInstructions.Add(processor.Create(OpCodes.Ldarg_0));
+  newInstructions.Add(processor.Create(OpCodes.Ldfld, loggerField));
 
-  // Format string: "param1={0}, param2={1}, ..."
   var format = string.Join(", ", method.Parameters.Select((p, i) => $"{p.Name}={{{i}}}"));
+  // Load the method name to the stack
+  newInstructions.Add(processor.Create(OpCodes.Ldstr, $"[InjectedIL] {method.Name} [{format}]")); 
 
-  // Inject: this._logger
-  il.InsertBefore(firstInstruction, il.Create(OpCodes.Ldarg_0));
-  il.InsertBefore(firstInstruction, il.Create(OpCodes.Ldfld, loggerField));
+  // Load to the stack the number of parameters         
+  newInstructions.Add(processor.Create(OpCodes.Ldc_I4, method.Parameters.Count));               
 
-  il.InsertBefore(firstInstruction, il.Create(OpCodes.Ldstr, format));
-  // 3. Create new object[paramCount]
-  il.InsertBefore(firstInstruction, il.Create(OpCodes.Ldc_I4, paramCount));
-  il.InsertBefore(firstInstruction, il.Create(OpCodes.Newarr, ModuleDefinition.TypeSystem.Object));
+  // Create a new object[] with the number loaded to the stack           
+  newInstructions.Add(processor.Create(OpCodes.Newarr, ModuleDefinition.TypeSystem.Object)); 
 
-  // 4. Fill the array using `dup`
-  for (int i = 0; i < paramCount; i++)
+  // Store the array in the local variable
+  newInstructions.Add(processor.Create(OpCodes.Stloc, arrayDef)); 
+
+  // Loop through the parameters of the method to run
+  for (int i = 0; i < method.Parameters.Count; i++)
   {
-    il.InsertBefore(firstInstruction, il.Create(OpCodes.Dup)); // keep array on stack for next stelem.ref
+    // Load the array from the local variable
+    newInstructions.Add(processor.Create(OpCodes.Ldloc, arrayDef)); 
 
-    il.InsertBefore(firstInstruction, il.Create(OpCodes.Ldc_I4, i)); // array index
-    il.InsertBefore(firstInstruction, il.Create(OpCodes.Ldarg, i + 1)); // parameter value
+    // Load the index
+    newInstructions.Add(processor.Create(OpCodes.Ldc_I4, i)); 
 
-    if (parameters[i].ParameterType.IsValueType)
+    // Load the argument of the original method (note that parameter 0 is 'this', that's omitted)
+    newInstructions.Add(processor.Create(OpCodes.Ldarg, i+1)); 
+
+    if (method.Parameters[i].ParameterType.IsValueType)
     {
-      il.InsertBefore(firstInstruction, il.Create(OpCodes.Box, ModuleDefinition.ImportReference(parameters[i].ParameterType)));
+      // Boxing is needed for value types
+      newInstructions.Add(processor.Create(OpCodes.Box, method.Parameters[i].ParameterType)); 
     }
-
-    il.InsertBefore(firstInstruction, il.Create(OpCodes.Stelem_Ref));
+    else
+    { 
+      // Casting for reference types
+      newInstructions.Add(processor.Create(OpCodes.Castclass, ModuleDefinition.TypeSystem.Object)); 
+    }
+    // Store in the array
+    newInstructions.Add(processor.Create(OpCodes.Stelem_Ref)); 
   }
 
+  // Load the array to the stack
+  newInstructions.Add(processor.Create(OpCodes.Ldloc, arrayDef)); 
 
-  il.InsertBefore(firstInstruction, il.Create(OpCodes.Call, LogInfoMethodReference));
+  // Call the LogEntry() method
+  newInstructions.Add(processor.Create(OpCodes.Call, LogInfoMethodReference)); 
 
+  // Add the new instructions in referse order
+  foreach (var newInstruction in newInstructions.Reverse<Instruction>()) 
+  {
+    var firstInstruction = method.Body.Instructions[0];
+    processor.InsertBefore(firstInstruction, newInstruction);
+  }
 
 }
 
