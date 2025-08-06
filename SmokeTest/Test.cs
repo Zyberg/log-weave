@@ -10,9 +10,17 @@ namespace SmokeTest
         _logger = logger;
       }
 
+      private int SumNumbers(int a, int b) {
+        return a + b;
+      }
+
+      private int ProductOfNumbers(int a, int b) {
+        return a * b;
+      }
+
       public int DoSomething(int oo, int bb) {
         _logger.LogInformation("oo={0}", oo);
-        return oo + bb;
+        return SumNumbers(ProductOfNumbers(oo, 3), bb);
       }
    } 
 }

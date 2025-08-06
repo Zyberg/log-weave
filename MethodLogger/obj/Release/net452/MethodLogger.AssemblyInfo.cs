@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCopyrightAttribute("Copyright 2025.")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Logs every method in an assembly.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.11.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.11+83d9464899d9aaf4d5a545815ac55d0d6e2fde68")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.11+7c7ae4b35034d4d1320e50ebad44164211465a81")]
 [assembly: System.Reflection.AssemblyProductAttribute("MethodLogger")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MethodLogger")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.11.0")]

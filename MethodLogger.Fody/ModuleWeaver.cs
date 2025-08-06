@@ -37,7 +37,8 @@ public class ModuleWeaver : BaseModuleWeaver
 
     foreach (var method in type.Methods.Where(m => m.HasBody && !m.IsConstructor))
     {
-      InjectLogCall(method, loggerField);
+      InjectLogCallEntry(method, loggerField);
+      InjectLogCallExit(method, loggerField);
     }
   }
 
@@ -77,7 +78,36 @@ public class ModuleWeaver : BaseModuleWeaver
 
     return ModuleDefinition.ImportReference(generic);
 }
-void InjectLogCall(MethodDefinition method, FieldDefinition loggerField)
+
+
+void InjectLogCallExit(MethodDefinition method, FieldDefinition loggerField)
+{
+  var processor = method.Body.GetILProcessor();
+  var emptyArrayCall = GetArrayEmptyObjectMethod();
+
+  var retInstructions = method.Body.Instructions
+    .Where(i => i.OpCode == OpCodes.Ret)
+    .ToList();
+
+  foreach (var ret in retInstructions)
+  {
+    // Create fresh instructions each time
+    var newInstructions = new List<Instruction>
+    {
+      processor.Create(OpCodes.Ldarg_0),
+      processor.Create(OpCodes.Ldfld, loggerField),
+      processor.Create(OpCodes.Ldstr, $"[InjectedIL] Exited {method.Name}"),
+      processor.Create(OpCodes.Call, emptyArrayCall),
+      processor.Create(OpCodes.Call, LogInfoMethodReference)
+    };
+
+    foreach (var instr in newInstructions)
+    {
+      processor.InsertBefore(ret, instr);
+    }
+  }
+}
+void InjectLogCallEntry(MethodDefinition method, FieldDefinition loggerField)
 {
   var newInstructions = new List<Instruction>();
 
@@ -95,7 +125,7 @@ void InjectLogCall(MethodDefinition method, FieldDefinition loggerField)
 
   var format = string.Join(", ", method.Parameters.Select((p, i) => $"{p.Name}={{{i}}}"));
   // Load the method name to the stack
-  newInstructions.Add(processor.Create(OpCodes.Ldstr, $"[InjectedIL] {method.Name} [{format}]")); 
+  newInstructions.Add(processor.Create(OpCodes.Ldstr, $"[InjectedIL] Entered {method.Name} [{format}]")); 
 
   // Load to the stack the number of parameters         
   newInstructions.Add(processor.Create(OpCodes.Ldc_I4, method.Parameters.Count));               

@@ -668,7 +668,7 @@
       ]
     },
     "MethodLogger.Fody/1.0.11": {
-      "sha512": "7MCBydYYvRBOpIycFl4LvBsk+trO1ovYXjwWR0mysaGOJp6XG/yczfsJt64rpjheLXXgjt8YwQb99ckZdX3M6Q==",
+      "sha512": "umL7QZ9GFC8Yg9rZq+pQl4ZK3ZI4ZVsrMZHCu88RAfxNsGAfwJCY0n7Q0X582HhnucPjPDwdTY5R9e5GQYDM+Q==",
       "type": "package",
       "path": "methodlogger.fody/1.0.11",
       "files": [

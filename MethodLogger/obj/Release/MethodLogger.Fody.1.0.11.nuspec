@@ -11,7 +11,7 @@
     <description>Logs every method in an assembly.</description>
     <copyright>Copyright 2025.</copyright>
     <tags>Hello World, ILWeaving, Fody, Cecil, AOP</tags>
-    <repository type="git" commit="83d9464899d9aaf4d5a545815ac55d0d6e2fde68" />
+    <repository type="git" commit="7c7ae4b35034d4d1320e50ebad44164211465a81" />
     <dependencies>
       <group targetFramework=".NETFramework4.5.2">
         <dependency id="Fody" version="6.6.4" include="All" />
